@@ -13,14 +13,11 @@ int square_root(int i, int sqrt)
 	{
 		return (sqrt);
 	}
-	if (sqrt == i / 2)
+	else if ((sqrt * sqrt) > i)
 	{
 		return (-1);
 	}
-	else
-	{
-		return (square_root(i, sqrt + 1));
-	}
+	return (square_root(i, sqrt + 1));
 }
 
 /**
@@ -31,18 +28,18 @@ int square_root(int i, int sqrt)
 
 int _sqrt_recursion(int n)
 {
-	int sqrt = n;
 
 	if (n < 0)
 	{
 		return (-1);
 	}
-	if (n == 1)
+	else if (n == 0)
+	{
+		return (0);
+	}
+	else if (n == 1)
 	{
 		return (1);
 	}
-	else
-	{
-		return (square_root(n, sqrt));
-	}
+	return (square_root(n, 1));
 }
