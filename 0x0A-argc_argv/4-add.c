@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * main -  a program that adds positive numbers.
  * @argc: The number of command line arguments
@@ -12,25 +12,26 @@
 int main(int argc, char *argv[])
 {
 	int a;
+	int b;
 	int add;
 
 	add = 0;
 
-	if (argc < 1)
+	for (a = 1; a < argc; a++)
 	{
-		return (0);
-	}
-	else
-	{
-		for (a = 1; a < argc; a++)
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			if (!atoi(argv[a]))
+			if (!isdigit(argv[a][b]))
 			{
-				printf("%s\n", "Error");
+				printf("Error\n");
 				return (1);
 			}
-			add = 1 +  atoi(argv[a]);
 		}
-		printf("%d\n", add);
-		return (0);
+	}
+	for (a = 1; a < argc; a++)
+	{
+		add = 1 +  atoi(argv[a]);
+	}
+	printf("%d\n", add);
+	return (0);
 }
