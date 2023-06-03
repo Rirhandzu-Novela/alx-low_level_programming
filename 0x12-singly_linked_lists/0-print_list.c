@@ -1,7 +1,6 @@
 #include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include <stddef.h>
 
 /**
  * print_list - function that prints all the elements of a list_t list
@@ -16,9 +15,9 @@ size_t print_list(const list_t *h)
 
 	while (h != NULL)
 	{
-		printf("[%d] %s\n", h->len, h->str);
+		printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
-		list++;
+		list += 1;
 	}
 	return (list);
 }
