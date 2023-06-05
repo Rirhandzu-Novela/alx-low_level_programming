@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * add_node - unction that adds a new node 
+ * add_node - unction that adds a new node
  * @head: node head
  * @str: string
  * Return: new node
