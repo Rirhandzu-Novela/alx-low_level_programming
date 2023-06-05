@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	s = (char *)&main;
-	j = atoi(argv[1]);;;
+	j = atoi(argv[1]);
 	i = 0;
 
 	while (i < j - 1)
