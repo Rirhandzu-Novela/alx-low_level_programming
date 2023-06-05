@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (; s1[a]; a++)
+		for (a = 0; s1[a]; a++)
 		{
 			;
 		}
@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else
 	{
-		for (; s2[b]; b++)
+		for (b = 0; s2[b]; b++)
 			;
 	}
 	c = a + b + 1;
