@@ -20,8 +20,8 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		else
 		{
-			 -Wall -pedantic -Werror -Wextra -std=gnu89 101-main.c 2-add_nodeint.c 101-print_listint_safe.c -o m
-			printf("-> [%p] %d\n", (void *)head, head->);
+			head = head->next;
+			printf("-> [%p] %d\n", (void *)head, head->n);
 			break;
 		}
 	}
